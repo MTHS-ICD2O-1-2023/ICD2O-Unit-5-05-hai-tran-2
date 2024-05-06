@@ -23,11 +23,11 @@ function findTriangleType() {
 
   const sumOfAngles = Number((angleA).toFixed(2)) + Number((angleB).toFixed(2)) + Number((angleC).toFixed(2))
 
-  if ( sumOfAngles == 180){
-    if ((angleA == angleB) && (angleB == angleC) && (angleC == angleA)) {
+  if (Math.round(sumOfAngles) == 180){
+    if ((lengthA == lengthB) && (lengthB == lengthC)) {
       // output
       document.getElementById("result").innerHTML = "This is a Equilateral Triangle"
-    } else if ((angleA == angleB) || (angleB == angleC) || (angleC == angleA)) {
+    } else if ((lengthA == lengthB) || (lengthB == lengthC) || (lengthA == lengthC)) {
       // output
       document.getElementById("result").innerHTML = "This is a Isosceles Triangle"
     } else {

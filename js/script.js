@@ -12,18 +12,12 @@
 
 function findTriangleType() {
   // input
-  const lengthA = document.getElementById("length-a").value
-  const lengthB = document.getElementById("length-b").value
-  const lengthC = document.getElementById("length-c").value
+  const lengthA = parseFloat(document.getElementById("length-a").value)
+  const lengthB = parseFloat(document.getElementById("length-b").value)
+  const lengthC = parseFloat(document.getElementById("length-c").value)
 
   // process
-  const angleA = Math.acos((lengthB ** 2 + lengthC ** 2 - lengthA ** 2) / (2 * lengthB * lengthC)) * (180 / Math.PI)
-  const angleB = Math.acos((lengthC ** 2 + lengthA ** 2 - lengthB ** 2) / (2 * lengthC * lengthA)) * (180 / Math.PI)
-  const angleC = Math.acos((lengthA ** 2 + lengthB ** 2 - lengthC ** 2) / (2 * lengthA * lengthB)) * (180 / Math.PI)
-
-  const sumOfAngles = Number((angleA).toFixed(2)) + Number((angleB).toFixed(2)) + Number((angleC).toFixed(2))
-
-  if (Math.round(sumOfAngles) == 180){
+  if ((lengthA + lengthB > lengthC) && (lengthA + lengthB > lengthC) && (lengthA + lengthB > lengthC)) {
     if ((lengthA == lengthB) && (lengthB == lengthC)) {
       // output
       document.getElementById("result").innerHTML = "This is a Equilateral Triangle"
@@ -38,4 +32,4 @@ function findTriangleType() {
     // output
     document.getElementById("result").innerHTML = "This is not a triangle"
   }
-} 
+}

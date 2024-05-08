@@ -17,7 +17,7 @@ function findTriangleType() {
   const lengthC = parseFloat(document.getElementById("length-c").value)
 
   // process
-  if ((lengthA + lengthB > lengthC) && (lengthA + lengthB > lengthC) && (lengthA + lengthB > lengthC)) {
+  if ((lengthA + lengthB > lengthC) && (lengthC + lengthB > lengthA) && (lengthA + lengthC > lengthB)) {
     if ((lengthA == lengthB) && (lengthB == lengthC)) {
       // output
       document.getElementById("result").innerHTML = "This is a Equilateral Triangle"
